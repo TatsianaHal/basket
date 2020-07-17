@@ -1,0 +1,21 @@
+.close-btn-wrapper {
+  position: relative;
+}
+
+button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+button:focus {
+  outline: none;
+}
+
+.btn-close {
+  width: 30px;
+  height: 30px;
+}
