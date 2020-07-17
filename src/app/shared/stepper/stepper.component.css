@@ -1,0 +1,22 @@
+.wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.text {
+  padding: 10px;
+  color: #455a64;
+  font-size: 20px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.line {
+  border: 1px solid #455a64;
+  width: 50px;
+}
+
+.bold {
+  font-weight: bold;
+}

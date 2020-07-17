@@ -35,3 +35,15 @@ button:focus {
   font-size: 26px;
   text-align: center;
 }
+
+.text {
+  padding: 10px;
+  color: #455a64;
+  font-size: 20px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.bold {
+  font-weight: bold;
+}

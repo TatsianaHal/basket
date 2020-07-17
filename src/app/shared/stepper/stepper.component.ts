@@ -1,15 +1,34 @@
-import { Component, OnInit } from '@angular/core';
+import {
+  Component,
+  OnInit,
+  Output,
+  EventEmitter,
+  Input,
+  OnChanges,
+} from "@angular/core";
 
 @Component({
-  selector: 'app-stepper',
-  templateUrl: './stepper.component.html',
-  styleUrls: ['./stepper.component.css']
+  selector: "app-stepper",
+  templateUrl: "./stepper.component.html",
+  styleUrls: ["./stepper.component.css"],
 })
-export class StepperComponent implements OnInit {
+export class StepperComponent implements OnInit, OnChanges {
+  selectedId: string = "elem1";
 
-  constructor() { }
+  @Input() curId: string;
 
-  ngOnInit(): void {
+  @Output() selectedElemId: EventEmitter<string> = new EventEmitter<string>();
+
+  constructor() {}
+
+  ngOnInit(): void {}
+
+  ngOnChanges() {
+    this.selectedId = this.curId;
   }
 
+  onElemClick(id: string) {
+    this.selectedId = id;
+    this.selectedElemId.emit(id);
+  }
 }

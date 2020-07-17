@@ -5,7 +5,99 @@
 </div>
 <div class="stepper">
   <p class="title">Оформление заказа:</p>
+  <app-stepper
+    [curId]="selectedId"
+    (selectedElemId)="selectedElemId($event)"
+  ></app-stepper>
 </div>
 <div class="content-wrap">
-  <perfect-scrollbar> </perfect-scrollbar>
+  <perfect-scrollbar>
+    <p
+      id="elem1"
+      class="text"
+      [ngClass]="{ bold: selectedId === 'elem1' }"
+      (click)="onElemClick('elem1')"
+    >
+      Проверка состава заказа
+    </p>
+
+    <p
+      id="elem2"
+      class="text"
+      [ngClass]="{ bold: selectedId === 'elem2' }"
+      (click)="onElemClick('elem2')"
+    >
+      О покупателе
+    </p>
+
+    <p
+      id="elem3"
+      class="text"
+      [ngClass]="{ bold: selectedId === 'elem3' }"
+      (click)="onElemClick('elem3')"
+    >
+      Доставка
+    </p>
+    <p>srdtfjdzserawr</p>
+    <p>srdtfjdzserawr</p>
+
+    <p>srdtfjdzserawr</p>
+
+    <p>srdtfjdzserawr</p>
+
+    <p>srdtfjdzserawr</p>
+
+    <p>srdtfjdzserawr</p>
+
+    <p>srdtfjdzserawr</p>
+
+    <p>srdtfjdzserawr</p>
+
+    <p>srdtfjdzserawr</p>
+
+    <p>srdtfjdzserawr</p>
+
+    <p>srdtfjdzserawr</p>
+
+    <p>srdtfjdzserawr</p>
+
+    <p>srdtfjdzserawr</p>
+
+    <p>srdtfjdzserawr</p>
+
+    <p>srdtfjdzserawr</p>
+
+    <p>srdtfjdzserawr</p>
+
+    <p>srdtfjdzserawr</p>
+
+    <p>srdtfjdzserawr</p>
+
+    <p>srdtfjdzserawr</p>
+
+    <p>srdtfjdzserawr</p>
+
+    <p>srdtfjdzserawr</p>
+
+    <p>srdtfjdzserawr</p>
+
+    <p>srdtfjdzserawr</p>
+
+    <p>srdtfjdzserawr</p>
+
+    <p>srdtfjdzserawr</p>
+
+    <p>srdtfjdzserawr</p>
+
+    <p>srdtfjdzserawr</p>
+
+    <p
+      id="elem4"
+      class="text"
+      [ngClass]="{ bold: selectedId === 'elem4' }"
+      (click)="onElemClick('elem4')"
+    >
+      Выбор способа оплаты
+    </p>
+  </perfect-scrollbar>
 </div>
