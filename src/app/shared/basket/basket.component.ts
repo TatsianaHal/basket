@@ -16,7 +16,7 @@ export class BasketComponent implements OnInit {
     console.log("onBasket");
     const dialogRef = this.dialog.open(ModalComponent, {
       width: "1000px",
-      height: "70%",
+      height: "90%",
       // required class set parent block position relative
       panelClass: "custom-panel-cls",
     });

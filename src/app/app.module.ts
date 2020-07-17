@@ -8,6 +8,15 @@ import {
 } from "@angular/material/dialog";
 import { NoopAnimationsModule } from "@angular/platform-browser/animations";
 import { RouterModule } from "@angular/router";
+import {
+  PERFECT_SCROLLBAR_CONFIG,
+  PerfectScrollbarConfigInterface,
+  PerfectScrollbarModule,
+} from "ngx-perfect-scrollbar";
+
+const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
+  suppressScrollX: false,
+};
 
 @NgModule({
   declarations: [AppComponent],
@@ -17,8 +26,14 @@ import { RouterModule } from "@angular/router";
     SharedModule,
     NoopAnimationsModule,
     RouterModule,
+    PerfectScrollbarModule,
   ],
-  providers: [],
+  providers: [
+    {
+      provide: PERFECT_SCROLLBAR_CONFIG,
+      useValue: DEFAULT_PERFECT_SCROLLBAR_CONFIG,
+    },
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

@@ -1,5 +1,6 @@
 .close-btn-wrapper {
   position: relative;
+  height: 32px;
 }
 
 button {
@@ -18,4 +19,19 @@ button:focus {
 .btn-close {
   width: 30px;
   height: 30px;
+}
+
+.stepper {
+  height: 100px;
+}
+
+.content-wrap {
+  height: calc(100% - 158px);
+}
+
+.title {
+  margin: 0;
+  color: #455a64;
+  font-size: 26px;
+  text-align: center;
 }
