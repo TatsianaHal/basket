@@ -28,6 +28,7 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     RouterModule,
     PerfectScrollbarModule,
   ],
+  exports: [MatDialogModule],
   providers: [
     {
       provide: PERFECT_SCROLLBAR_CONFIG,
