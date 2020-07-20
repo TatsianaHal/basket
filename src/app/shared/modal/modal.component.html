@@ -1,103 +1,40 @@
 <div class="close-btn-wrapper">
-  <button (click)="onClose()">
+  <button (click)="onClose()" class="close-btn">
     <img src="../assets/close.svg" alt="close" class="btn-close" />
   </button>
 </div>
 <div class="stepper">
   <p class="title">Оформление заказа:</p>
-  <app-stepper
+  <!-- <app-stepper
     [curId]="selectedId"
     (selectedElemId)="selectedElemId($event)"
-  ></app-stepper>
+  ></app-stepper> -->
 </div>
 <div class="content-wrap">
-  <perfect-scrollbar>
-    <p
-      id="elem1"
-      class="text"
-      [ngClass]="{ bold: selectedId === 'elem1' }"
-      (click)="onElemClick('elem1')"
-    >
-      Проверка состава заказа
-    </p>
+  <mat-tab-group (selectedTabChange)="tabChanged($event)">
+    <mat-tab label="Проверка состава заказа">
+      <perfect-scrollbar>
+        <div class="tab-content"></div>
+      </perfect-scrollbar>
+    </mat-tab>
+    <mat-tab label="О покупателе">
+      <perfect-scrollbar>
+        <div class="tab-content"></div>
+      </perfect-scrollbar>
+    </mat-tab>
+    <mat-tab label="Доставка">
+      <perfect-scrollbar>
+        <div class="tab-content"></div>
+      </perfect-scrollbar>
+    </mat-tab>
+    <mat-tab label="Выбор способа оплаты">
+      <perfect-scrollbar>
+        <div class="tab-content"></div>
+      </perfect-scrollbar>
+    </mat-tab>
+  </mat-tab-group>
+</div>
 
-    <p
-      id="elem2"
-      class="text"
-      [ngClass]="{ bold: selectedId === 'elem2' }"
-      (click)="onElemClick('elem2')"
-    >
-      О покупателе
-    </p>
-
-    <p
-      id="elem3"
-      class="text"
-      [ngClass]="{ bold: selectedId === 'elem3' }"
-      (click)="onElemClick('elem3')"
-    >
-      Доставка
-    </p>
-    <p>srdtfjdzserawr</p>
-    <p>srdtfjdzserawr</p>
-
-    <p>srdtfjdzserawr</p>
-
-    <p>srdtfjdzserawr</p>
-
-    <p>srdtfjdzserawr</p>
-
-    <p>srdtfjdzserawr</p>
-
-    <p>srdtfjdzserawr</p>
-
-    <p>srdtfjdzserawr</p>
-
-    <p>srdtfjdzserawr</p>
-
-    <p>srdtfjdzserawr</p>
-
-    <p>srdtfjdzserawr</p>
-
-    <p>srdtfjdzserawr</p>
-
-    <p>srdtfjdzserawr</p>
-
-    <p>srdtfjdzserawr</p>
-
-    <p>srdtfjdzserawr</p>
-
-    <p>srdtfjdzserawr</p>
-
-    <p>srdtfjdzserawr</p>
-
-    <p>srdtfjdzserawr</p>
-
-    <p>srdtfjdzserawr</p>
-
-    <p>srdtfjdzserawr</p>
-
-    <p>srdtfjdzserawr</p>
-
-    <p>srdtfjdzserawr</p>
-
-    <p>srdtfjdzserawr</p>
-
-    <p>srdtfjdzserawr</p>
-
-    <p>srdtfjdzserawr</p>
-
-    <p>srdtfjdzserawr</p>
-
-    <p>srdtfjdzserawr</p>
-
-    <p
-      id="elem4"
-      class="text"
-      [ngClass]="{ bold: selectedId === 'elem4' }"
-      (click)="onElemClick('elem4')"
-    >
-      Выбор способа оплаты
-    </p>
-  </perfect-scrollbar>
+<div class="get-btn-wrap">
+  <button class="get-btn" (click)="onGetBtn()">ЗАКАЗАТЬ</button>
 </div>

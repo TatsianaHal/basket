@@ -1,5 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import { MatDialogRef } from "@angular/material/dialog";
+import Swal from "sweetalert2";
+import { MatTabChangeEvent } from "@angular/material/tabs";
 
 @Component({
   selector: "app-modal",
@@ -9,6 +11,27 @@ import { MatDialogRef } from "@angular/material/dialog";
 export class ModalComponent implements OnInit {
   selectedId: string = "elem1";
 
+  private toast = Swal.mixin({
+    toast: true,
+    position: "top",
+    showConfirmButton: false,
+    timer: 3000,
+    showClass: {
+      popup: "",
+      backdrop: "",
+      icon: "swal2-icon-show",
+    },
+    hideClass: {
+      popup: "",
+      backdrop: "",
+      icon: "swal2-icon-hide",
+    },
+    onOpen: (toast) => {
+      toast.addEventListener("mouseenter", Swal.stopTimer);
+      toast.addEventListener("mouseleave", Swal.resumeTimer);
+    },
+  });
+
   constructor(private dialogRef: MatDialogRef<ModalComponent>) {}
 
   ngOnInit(): void {}
@@ -16,14 +39,6 @@ export class ModalComponent implements OnInit {
   selectedElemId(curId: string) {
     this.selectedId = curId;
     console.log("curId:", curId);
-
-    const scrollToCurElem = document.getElementById(curId);
-    console.log("scrollToCurElem:", scrollToCurElem);
-    // scrollToCurElem.scrollTo = 200;
-    window.scrollBy(0, 200);
-    if (!!scrollToCurElem) {
-      scrollToCurElem.scrollIntoView();
-    }
   }
 
   onElemClick(id: string) {
@@ -32,5 +47,14 @@ export class ModalComponent implements OnInit {
 
   onClose() {
     this.dialogRef.close();
+  }
+
+  onGetBtn() {
+    this.dialogRef.close();
+    this.toast.fire("Заявка направлена в обработку");
+  }
+
+  tabChanged(tabChangeEvent: MatTabChangeEvent): void {
+    console.log("tabChangeEvent:", tabChangeEvent);
   }
 }

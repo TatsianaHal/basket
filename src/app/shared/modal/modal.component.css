@@ -4,12 +4,15 @@
 }
 
 button {
-  position: absolute;
-  top: 0;
-  right: 0;
   border: none;
   background-color: transparent;
   cursor: pointer;
+}
+
+.close-btn {
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 
 button:focus {
@@ -22,11 +25,13 @@ button:focus {
 }
 
 .stepper {
-  height: 100px;
+  height: 50px;
+  margin-top: -30px;
 }
 
 .content-wrap {
-  height: calc(100% - 158px);
+  height: calc(100% - 102px);
+  /* overflow-y: scroll; */
 }
 
 .title {
@@ -46,4 +51,25 @@ button:focus {
 
 .bold {
   font-weight: bold;
+}
+
+.get-btn-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+}
+
+.get-btn {
+  background-color: #4682b4;
+  color: white;
+  width: 300px;
+  height: 50px;
+  border: 1px solid #4682b4;
+  border-radius: 5px;
+  font-size: 22px;
+}
+
+:host ::ng-deep .content-wrap .mat-tab-group {
+  height: calc(100% - 10px);
 }
