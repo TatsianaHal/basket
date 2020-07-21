@@ -216,3 +216,44 @@ input[type="number"] {
 .m-b {
   margin-bottom: 20px;
 }
+
+.customer-wrap {
+  padding: 20px 20px 0 20px;
+}
+
+:host ::ng-deep .customer-wrap .mat-form-field {
+  width: 500px;
+}
+
+.flex-center {
+  justify-content: center;
+}
+
+.call {
+  text-align: center;
+  font-weight: bold;
+  color: #4682b4;
+  cursor: pointer;
+}
+
+.example-radio-group {
+  display: flex;
+  flex-direction: column;
+  margin: 15px 0;
+}
+
+.example-radio-button {
+  margin: 5px;
+}
+
+.radio-title {
+  font-weight: bold;
+  color: #4682b4;
+}
+
+:host
+  ::deep
+  .mat-radio-button.mat-accent.mat-radio-checked
+  .mat-radio-outer-circle {
+  background-color: #4682b4;
+}

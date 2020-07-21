@@ -205,17 +205,111 @@
     </mat-tab>
     <mat-tab label="О покупателе">
       <perfect-scrollbar>
-        <div class="tab-content"></div>
+        <div class="tab-content customer-wrap">
+          <div class="flex flex-center">
+            <mat-form-field appearance="standard">
+              <mat-label>Имя:</mat-label>
+              <input matInput />
+            </mat-form-field>
+          </div>
+
+          <div class="flex flex-center">
+            <mat-form-field appearance="standard">
+              <mat-label>Фамилия:</mat-label>
+              <input matInput />
+            </mat-form-field>
+          </div>
+
+          <div class="flex flex-center">
+            <mat-form-field appearance="standard">
+              <mat-label>Электронная почта:</mat-label>
+              <input matInput />
+            </mat-form-field>
+          </div>
+
+          <div class="flex flex-center">
+            <mat-form-field appearance="standard">
+              <mat-label>Контактный телефон:</mat-label>
+              <input matInput />
+            </mat-form-field>
+          </div>
+
+          <p class="call">Заказать обратный звонок</p>
+        </div>
       </perfect-scrollbar>
     </mat-tab>
     <mat-tab label="Доставка">
       <perfect-scrollbar>
-        <div class="tab-content"></div>
+        <div class="tab-content customer-wrap">
+          <div class="flex flex-center">
+            <mat-form-field appearance="standard">
+              <mat-label>Город/ населенный пункт:</mat-label>
+              <input matInput />
+            </mat-form-field>
+          </div>
+
+          <div class="flex flex-center">
+            <mat-form-field appearance="standard">
+              <mat-label>Улица:</mat-label>
+              <input matInput />
+            </mat-form-field>
+          </div>
+
+          <div class="flex flex-center">
+            <mat-form-field appearance="standard">
+              <mat-label>Дом, корпус, строение:</mat-label>
+              <input matInput />
+            </mat-form-field>
+          </div>
+
+          <div class="flex flex-center">
+            <mat-form-field appearance="standard">
+              <mat-label>Контактный телефон:</mat-label>
+              <input matInput />
+            </mat-form-field>
+          </div>
+
+          <div class="flex flex-center">
+            <mat-form-field appearance="standard">
+              <mat-label>Предпочтительное время доставки:</mat-label>
+              <input matInput />
+            </mat-form-field>
+          </div>
+
+          <p class="call">
+            Бонусная программа по доставке с учетом сделанных ранее покупок:
+          </p>
+
+          <p>
+            Здесь можно придумать какой-нибудь красивый интерактивный блок,
+            привлекающий внимание потенциального клиента
+          </p>
+        </div>
       </perfect-scrollbar>
     </mat-tab>
     <mat-tab label="Выбор способа оплаты">
       <perfect-scrollbar>
-        <div class="tab-content"></div>
+        <div class="tab-content customer-wrap flex-center">
+          <p class="radio-title">
+            Выберите предпочтительный способ оплаты:
+          </p>
+          <mat-radio-group class="example-radio-group">
+            <mat-radio-button
+              class="example-radio-button"
+              *ngFor="let item of vars"
+              [value]="item"
+            >
+              {{ item }}
+            </mat-radio-button>
+          </mat-radio-group>
+          <p class="radio-title">
+            Бонусная программа
+          </p>
+
+          <p>
+            Здесь тоже круто придумать какой-то интерактив
+          </p>
+        </div>
       </perfect-scrollbar>
     </mat-tab>
   </mat-tab-group>

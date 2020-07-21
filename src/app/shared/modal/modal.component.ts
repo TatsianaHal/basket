@@ -15,6 +15,15 @@ export class ModalComponent implements OnInit, AfterViewInit {
   targetElem;
   inputVal: number = 1;
 
+  vars: string[] = [
+    "Наличными",
+    "Картой рассрочки",
+    "Другой банковской картой",
+    "Подарочным сертификатом",
+    "Бонусными баллами",
+  ];
+  favoriteSeason;
+
   private toast = Swal.mixin({
     toast: true,
     position: "top",
