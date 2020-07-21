@@ -73,3 +73,146 @@ button:focus {
 :host ::ng-deep .content-wrap .mat-tab-group {
   height: calc(100% - 10px);
 }
+
+.order {
+  display: flex;
+  justify-content: flex-start;
+  padding: 10px;
+  width: calc(100% - 20px);
+  height: 200px;
+  border-bottom: 2px solid #4682b4;
+}
+
+.order-item {
+  width: 200px;
+  height: 200px;
+}
+
+.order-title {
+  font-size: 18px;
+  font-weight: bold;
+  color: #4682b4;
+}
+
+.image {
+  width: 200px;
+}
+
+.details {
+  position: relative;
+  width: calc(100% - 220px);
+}
+
+.remove {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  margin: 0;
+  color: red;
+  cursor: pointer;
+}
+
+.more-order {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  margin: 0;
+  color: #4682b4;
+  cursor: pointer;
+}
+
+.flex {
+  display: flex;
+}
+
+.order-input {
+  margin-right: 80px;
+  padding-left: 20px;
+  position: relative;
+}
+
+.arr {
+  cursor: pointer;
+}
+
+.arr-right {
+  position: absolute;
+  top: 5px;
+  right: -21px;
+}
+
+.arr-left {
+  position: absolute;
+  top: 5px;
+  left: 0;
+}
+
+.arr img {
+  width: 15px;
+  height: 15px;
+}
+
+.arr-right img {
+  transform: rotate(180deg);
+}
+
+input {
+  height: 20px;
+  width: 100px;
+  text-align: center;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.padding-top {
+  padding-top: 30px;
+}
+
+.amount {
+  margin: 0 80px 0 0;
+
+  padding-top: 2px;
+  font-weight: bold;
+  color: #455a64;
+}
+
+.price {
+  margin: 0;
+  padding-top: 2px;
+  font-weight: bold;
+  color: #4682b4;
+}
+
+.flex-end {
+  justify-content: flex-start;
+}
+
+.sum {
+  padding-left: 350px;
+  margin-right: 78px;
+  font-weight: bold;
+  color: #455a64;
+}
+
+.sum-numb {
+  font-weight: bold;
+  color: #4682b4;
+}
+
+.p-t {
+  padding-top: 20px;
+}
+
+.m-b {
+  margin-bottom: 20px;
+}

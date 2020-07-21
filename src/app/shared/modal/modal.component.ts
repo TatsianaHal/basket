@@ -1,15 +1,19 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit, Inject, AfterViewInit } from "@angular/core";
 import { MatDialogRef } from "@angular/material/dialog";
 import Swal from "sweetalert2";
 import { MatTabChangeEvent } from "@angular/material/tabs";
+import { DOCUMENT } from "@angular/common";
 
 @Component({
   selector: "app-modal",
   templateUrl: "./modal.component.html",
   styleUrls: ["./modal.component.css"],
 })
-export class ModalComponent implements OnInit {
+export class ModalComponent implements OnInit, AfterViewInit {
   selectedId: string = "elem1";
+
+  targetElem;
+  inputVal: number = 1;
 
   private toast = Swal.mixin({
     toast: true,
@@ -32,9 +36,16 @@ export class ModalComponent implements OnInit {
     },
   });
 
-  constructor(private dialogRef: MatDialogRef<ModalComponent>) {}
+  constructor(
+    private dialogRef: MatDialogRef<ModalComponent>,
+    @Inject(DOCUMENT) document
+  ) {}
 
   ngOnInit(): void {}
+
+  ngAfterViewInit() {
+    this.targetElem = document.getElementById("numb");
+  }
 
   selectedElemId(curId: string) {
     this.selectedId = curId;
@@ -56,5 +67,15 @@ export class ModalComponent implements OnInit {
 
   tabChanged(tabChangeEvent: MatTabChangeEvent): void {
     console.log("tabChangeEvent:", tabChangeEvent);
+  }
+
+  onLess() {
+    if (this.inputVal >= 1) {
+      this.inputVal = this.inputVal - 1;
+    }
+  }
+
+  onMore() {
+    this.inputVal = this.inputVal + 1;
   }
 }
